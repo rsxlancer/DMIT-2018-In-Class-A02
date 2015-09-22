@@ -7,6 +7,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "website(1)", "http://localh
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{ffa49de3-5311-4e13-8fc0-daa3881a377e}|eRestaurant.Framework.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_51106"
 		Debug.AspNetCompiler.PhysicalPath = "website\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51106\"
@@ -25,13 +26,22 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "website(1)", "http://localh
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eRestaurant.Framework", "eRestaurant.Framework\eRestaurant.Framework.csproj", "{FFA49DE3-5311-4E13-8FC0-DAA3881A377E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F86107EC-C977-4B0E-AEB1-35F2D0DA52FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F86107EC-C977-4B0E-AEB1-35F2D0DA52FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86107EC-C977-4B0E-AEB1-35F2D0DA52FF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86107EC-C977-4B0E-AEB1-35F2D0DA52FF}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FFA49DE3-5311-4E13-8FC0-DAA3881A377E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA49DE3-5311-4E13-8FC0-DAA3881A377E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA49DE3-5311-4E13-8FC0-DAA3881A377E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA49DE3-5311-4E13-8FC0-DAA3881A377E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
