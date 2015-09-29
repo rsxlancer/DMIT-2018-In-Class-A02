@@ -9,6 +9,11 @@ namespace eRestaurant.Framework.Entities
 {
     public class Item
     {
+        public Item()
+        {
+            Active = true;
+        }
+
         [Key]
         public int ItemID { get; set; }
         public string Description { get; set; }
