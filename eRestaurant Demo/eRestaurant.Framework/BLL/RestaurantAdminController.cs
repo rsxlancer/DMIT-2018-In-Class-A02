@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using eRestaurant.Framework.DAL;
 using eRestaurant.Framework.Entities;
-using System.ComponentModel; // needed for [DAtaObject] and related attribute classes
+using System.ComponentModel; // needed for [DataObject] and related attribute classes
 
 namespace eRestaurant.Framework.BLL
 {
