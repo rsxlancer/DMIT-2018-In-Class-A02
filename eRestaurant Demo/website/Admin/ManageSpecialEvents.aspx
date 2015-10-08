@@ -7,10 +7,12 @@
         </h1>
     
     <!-- ObjectDataSource control to do the underlying communication with my BLL and my ListView Control -->
-        <asp:ObjectDataSource ID="SpecialEventsDataSource" runat="server" TypeName="eRestaurant.Framework.Bll.RestaurantAdminController" SelectMethod="ListAllSpecialEvents" DataObjectTypeName="eRestaurant.Framework.Entities.SpecialEvent" OldValuesParameterFormatString="original_{0}" UpdateMethod="UpdateSpecialEvent" DeleteMethod="DeleteSpecialEvent" InsertMethod="AddSpecialEvent">
+        <asp:ObjectDataSource ID="SpecialEventsDataSource" runat="server" TypeName="eRestaurant.Framework.Bll.RestaurantAdminController" SelectMethod="ListAllSpecialEvents" DataObjectTypeName="eRestaurant.Framework.Entities.SpecialEvent" OldValuesParameterFormatString="original_{0}" UpdateMethod="UpdateSpecialEvent" DeleteMethod="DeleteSpecialEvent" InsertMethod="AddSpecialEvent" OnDeleted="ProcessExceptions" OnInserted="ProcessExceptions" OnUpdated="ProcessExceptions">
     </asp:ObjectDataSource>
 
     <%--<asp:GridView ID="SpecialEventsGridView" runat="server" DataSourceID="SpecialEventsDataSource"></asp:GridView>--%>
+
+        <asp:Label ID="MessageLabel" runat="server" />
 
         <asp:ListView ID="SpecialEventsListView" runat="server" DataSourceID="SpecialEventsDataSource" DataKeyNames="EventCode" InsertItemPosition="LastItem">
             <LayoutTemplate>
