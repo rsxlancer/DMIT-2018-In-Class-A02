@@ -26,5 +26,61 @@ namespace eRestaurant.Framework.BLL
                 return context.SpecialEvents.ToList();
             }
         }
+        
+        [DataObjectMethod(DataObjectMethodType.Update, false)]
+        public void UpdateSpecialEvent(SpecialEvent item)
+        {
+            using (RestaurantContext context = new RestaurantContext())
+            {
+                //First attach the item to the dbContext collection
+                var attached = context.SpecialEvents.Attach(item);
+
+                // var matchingWithExistingValues = context.Entry<SpecialEvent>(attached);
+                //matchingWithExistingValues.State = System.Data.Entity.EntityState.Modified;
+                //context.SaveChanges();
+
+                
+                var existing = context.Entry<SpecialEvent>(attached);
+                existing.State = System.Data.Entity.EntityState.Modified;
+                
+                context.SaveChanges();
+
+            }
+            //First attacj the item to the dbContext collection
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Delete, false)]
+        public void DeleteSpecialEvent(SpecialEvent item)
+        {
+            using (var context = new RestaurantContext())
+            {
+                //first get a reference to the actual item by its primary key
+                //find() is a METHOD to look up an utem by its primary key.
+                var existing = context.SpecialEvents.Find(item.EventCode);
+
+                //second, remove the item from the database context
+                context.SpecialEvents.Remove(existing);
+
+                //lastly, save the changes to the database
+                context.SaveChanges();
+
+            }
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Insert, false)]
+        public void AddSpecialEvent(SpecialEvent item)
+        {
+            using (var context = new RestaurantContext())
+            {
+                //add the item to dbcontext
+                var added = context.SpecialEvents.Add(item);
+                //p.s. - we aren't really going to do anything with the variable 'added;
+                // i just want you to be aware that the Add() METHOD will return the 
+                //newly added object. (this can be useful in other situations, which we will see later)
+
+                //save changes
+                context.SaveChanges();
+            }
+        }
     }
 }
