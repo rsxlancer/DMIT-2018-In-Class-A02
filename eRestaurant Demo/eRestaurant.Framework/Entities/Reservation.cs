@@ -15,8 +15,8 @@ namespace eRestaurant.Framework.Entities
         public DateTime ReservationDate { get; set; }
         public int NumberInParty { get; set; }
         public string ContactPhone { get; set; }
-        public char ReservationStatus { get; set; }
-        public char EventCode { get; set; }
+        public string ReservationStatus { get; set; }
+        public string EventCode { get; set; }
 
         //Navigation Properties
         public virtual ICollection<Table> Tables { get; set; }

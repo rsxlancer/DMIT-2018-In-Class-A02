@@ -48,13 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ReservationsController.cs" />
     <Compile Include="BLL\RestaurantAdminController.cs" />
     <Compile Include="BLL\TempController.cs" />
     <Compile Include="DAL\RestaurantContext.cs" />
     <Compile Include="Entities\Bill.cs" />
     <Compile Include="Entities\BillItem.cs" />
+    <Compile Include="Entities\DTOs\DailyReservation.cs" />
     <Compile Include="Entities\Item.cs" />
     <Compile Include="Entities\MenuCategory.cs" />
+    <Compile Include="Entities\POCOs\ActiveEvent.cs" />
+    <Compile Include="Entities\POCOs\Booking.cs" />
     <Compile Include="Entities\Reservation.cs" />
     <Compile Include="Entities\SpecialEvent.cs" />
     <Compile Include="Entities\Table.cs" />
